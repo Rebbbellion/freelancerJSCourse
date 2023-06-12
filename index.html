@@ -123,7 +123,8 @@
       .page__list {
         display: grid;
         justify-content: center;
-        row-gap: 15px;
+		grid-auto-flow: column dense;
+        gap: 30px;
       }
       .page__item {
         transition: color 0.3s ease;
@@ -182,6 +183,9 @@
             <li class="page__item">
               <a href="lesson_2/index.html">Lesson_2</a>
             </li>
+			<li class="page__item">
+				<a href="lesson_3/index.html">Lesson_3</a>
+			  </li>
           </ul>
         </div>
       </main>
