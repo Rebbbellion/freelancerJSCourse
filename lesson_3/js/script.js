@@ -15,7 +15,7 @@ const secondChild = {
   name: prompt("Введіть ім'я другої дитини", 'Максим') ?? 'Ви не ввели імя',
   candiesAmount: parseInt(prompt('Введіть кількість цукерок другої дитини', 0)),
 };
-
+let comparisonResult;
 firstChild.candiesAmount = checkNumberValue(
   firstChild.candiesAmount,
   'Кількість цукерок вказана неправильно'
@@ -26,13 +26,13 @@ secondChild.candiesAmount = checkNumberValue(
 );
 
 if (firstChild.candiesAmount > secondChild.candiesAmount) {
-  alert(firstChild.name ?? "Ви не ввели ім'я дитини");
+  comparisonResult = firstChild.name;
 } else if (firstChild.candiesAmount < secondChild.candiesAmount) {
-  alert(secondChild.name ?? "Ви не ввели ім'я дитини");
+  comparisonResult = secondChild.name;
 } else if (+firstChild.candiesAmount === +secondChild.candiesAmount) {
-  alert('Кількість цукерок однакова');
+  comparisonResult = 'Кількість цукерок однакова';
 } else {
-  alert('Невірно введена кількість цукерок');
+  comparisonResult = 'Невірно введена кількість цукерок';
 }
 
 const task1Solution = `
@@ -40,6 +40,7 @@ const task1Solution = `
 <div>Кількість цукерок у першої дитини: ${firstChild.candiesAmount};</div>
 <div>Ім'я другої дитини: ${secondChild.name};</div>
 <div>Кількість цукерок у другої  дитини: ${secondChild.candiesAmount};</div>
+<div>Ім'я дитини у якої цукерок більше: ${comparisonResult};</div>
 `;
 writeTaskSolution(1, task1Solution);
 
