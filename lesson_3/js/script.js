@@ -57,7 +57,7 @@ let lotteryTicketPrice = 4;
 let purchaseResult;
 if (+moneyAmount < +productPrice) {
   alert('Я не можу продати Вам цей товар');
-  purchasepurchaseResult = 'Ви не змогли придбати товар';
+  purchaseResult = 'Ви не змогли придбати товар';
 } else if (+moneyAmount >= +productPrice + lotteryTicketPrice) {
   if (confirm('Не бажаєте купити лоторейний білет?')) {
     alert('Дякую за покупку лоторейного квитка. Хай щастить. Приходьте ще');
