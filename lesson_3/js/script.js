@@ -84,13 +84,14 @@ const task2Solution = `
 writeTaskSolution(2, task2Solution);
 
 //Task 3
-
-let randomNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
+const min = 1;
+const max = 5;
+let randomNumber = Math.floor(Math.random() * (max - min + min) + min);
 let userAttempt = parseInt(prompt('Спробуйте вгадати число від 1 до 5', 1));
 userAttempt = checkNumberValue(userAttempt, 'Число введено не вірно');
 let attemptResult;
 
-if (userAttempt >= 1 && userAttempt <= 5) {
+if (userAttempt >= min && userAttempt <= max) {
   if (userAttempt === randomNumber) {
     alert('Ви вгадали!');
     attemptResult = 'Ви вгадали!';
@@ -106,7 +107,7 @@ if (userAttempt >= 1 && userAttempt <= 5) {
       attemptResult = 'Ви не вгадали :(';
     }
   }
-} else if (userAttempt < 1 || userAttempt > 5) {
+} else if (userAttempt < min || userAttempt > max) {
   alert('Ви ввели занадто мале/велике число');
   attemptResult = 'Ви ввели занадто мале/велике число';
 } else {
