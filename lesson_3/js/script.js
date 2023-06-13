@@ -86,7 +86,7 @@ writeTaskSolution(2, task2Solution);
 //Task 3
 const min = 1;
 const max = 5;
-let randomNumber = Math.floor(Math.random() * (max - min + min) + min);
+let randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
 let userAttempt = parseInt(prompt('Спробуйте вгадати число від 1 до 5', 1));
 userAttempt = checkNumberValue(userAttempt, 'Число введено не вірно');
 let attemptResult;
